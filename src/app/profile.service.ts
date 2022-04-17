@@ -7,5 +7,10 @@ import 'rxjs/add/operator/map';
 })
 export class ProfileService {
 
+  private username:string;
+  clientid = '';
+  clientsecret = '';
+
+
   constructor(private http: HttpClient) { }
 }
