@@ -12,5 +12,12 @@ export class ProfileService {
   clientsecret = '';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    console.log ('service is now ready');
+    this.username= 'SusanMageto';
+  }
+
+  getProfileInfo () {
+    
+  }
 }
