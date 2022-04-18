@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 })
 export class ProfileService {
 
-  private username:string;
+  private username!:string;
   clientid = '';
   clientsecret = '';
 
