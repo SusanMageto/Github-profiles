@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileService } from './profile.service';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +19,7 @@ import { ProfileComponent } from './profile/profile.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

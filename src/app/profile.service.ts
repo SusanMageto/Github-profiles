@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';
-import { pipe } from 'rxjs';
+
 
 
 @Injectable({
@@ -26,7 +26,7 @@ export class ProfileService {
         this.clientid +
         '&clientsecret=' +
         this.clientsecret
-    );
+    )
     .pipe(map((res:any)=>res));
   }
 }
