@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';
 
 
@@ -9,9 +9,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ProfileService {
-  private username!: string;
-  clientid = '';
-  clientsecret = '';
+  username: string;
+  // clientid = '';
+  // clientsecret = '';
 
   constructor(private http: HttpClient) {
     console.log('service is now ready');
@@ -21,11 +21,7 @@ export class ProfileService {
   getProfileInfo() {
     return this.http.get(
       'https://api.github.com/users/' +
-        this.username +
-        '?client_id=' +
-        this.clientid +
-        '&clientsecret=' +
-        this.clientsecret
+        this.username 
     )
     .pipe(map((res:any)=>res));
   }
@@ -33,12 +29,12 @@ export class ProfileService {
   getProfileRepos() {
     return this.http.get(
       'https://api.github.com/users/' +
-        this.username +
-        '/repos?client_id=' +
-        this.clientid +
-        '&clientsecret=' +
-        this.clientsecret
+        this.username + '/repos'
     )
     .pipe(map((res:any)=>res));
+  }
+
+  myUpdate (username:string){
+    this.username= username;
   }
 }
