@@ -1,1 +1,67 @@
-<p>profile works!</p>
+<div class="container-fluid">
+  <form action="" class="search">
+    <div class="form-group">
+      <p>
+        <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Search Username"> <br>
+        <button class="btn btn-primary btn-" (click)="mySearch()"> Search </button>
+      </p>
+    </div>
+    <br> <br>
+  </form>
+  <div class="container">
+    <div class="left col-sm-5">
+      <div class="panel-heading">
+        {{profile.name}} <small>{{profile.login}}</small>, <span *ngIf="profile.company"> Works at
+          {{profile.company}}</span>
+      </div>
+      <div class="">
+        <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+      </div>
+      <div class="">
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="profile.bio">
+            {{profile.bio}}
+          </li>
+          <li class="list-group-item" *ngIf="profile.hireable">
+            Available for Hire
+          </li>
+          <li class="list-group-item" *ngIf="profile.email"> <a href="emailto:{{profile.email}}"> {{profile.email}}</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p>
+          <span class="label label-default "> {{profile.followers}} Followers</span> <br>
+          <span class="label label-default "> Following {{profile.following}}</span> <br>
+          <span class="label label-default "> {{profile.public_gists}} Public gists</span> <br>
+          <span class="label label-default "> {{profile.repos}} Public Repos</span>
+        </p>
+        <p>
+          <a href="{{profile.html_url}}" target="_blank" class="btn btn-primary btn-sm pull-right">View Profile on
+            Github</a></p>
+      </div>
+    </div>
+    <div class="right col-sm-7">
+      <div class="rep">
+        <h3 class="panel-title "> Repositories</h3>
+      </div>
+      <div class="panel-body" *ngFor="let repo of repos">
+        <div class="reponame">
+          <p class="clearfix">
+            {{repo.name}}
+          </p>
+        </div>
+        <br>
+        <br>
+        <div class="checking">
+          <button class="check">
+            <a href="{{repo.html_url}}" class="btn btn-sm btn-outline-default"> Check on Github</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
