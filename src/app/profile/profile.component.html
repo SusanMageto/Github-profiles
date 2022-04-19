@@ -55,7 +55,7 @@
         <br>
         <div class="checking">
           <button class="check">
-            <a href="{{repo.html_url}}" class="btn btn-sm btn-primary"> Check on Github</a>
+            <a href="{{repo.html_url}}" class="btn btn-sm btn-outline-default"> Check on Github</a>
           </button>
         </div>
       </div>
@@ -65,55 +65,3 @@
 
 
 
-<!-- <div *ngIf="profile">
-  <div class="left">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        {{profile.name}} <small>{{profile.login}}</small>, <span *ngIf="profile.company"> Works at {{profile.company}}</span>
-      </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="">
-            <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
-          </div>
-        </div>
-        <div class="">
-          <ul class="list-group">
-            <li class="list-group-item" *ngIf="profile.bio">
-              {{profile.bio}}
-            </li>
-            <li class="list-group-item" *ngIf="profile.hireable">
-              Available for Hire
-            </li>
-            <li class="list-group-item" *ngIf="profile.email"> <a href="emailto:{{profile.email}}"> {{profile.email}}</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p>
-            <span class="label label-default "> {{profile.followers}} Followers</span> <br>
-            <span class="label label-default "> Following {{profile.following}}</span> <br>
-            <span class="label label-default "> {{profile.public_gists}} Public gists</span> <br>
-            <span class="label label-default "> {{profile.repos}} Public Repos</span>
-          </p>
-          <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-primary btn-sm">View Profile on Github</a></p>
-        </div>
-  </div>
-      <div class="">
-        <div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"> Repositories
-                 </h3>
-            </div>
-            <div class="panel-body" *ngFor="let repo of repos">
-              <p class="clearfix">
-                {{repo.name}} <a href="{{repo.html_url}}" class="btn btn-sm btn-primary pull-right"> Check Out this project on Github</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';
 
 
@@ -10,8 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class ProfileService {
   username: string;
-  // clientid = '';
-  // clientsecret = '';
+
 
   constructor(private http: HttpClient) {
     console.log('service is now ready');
