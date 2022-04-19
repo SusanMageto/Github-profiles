@@ -16,11 +16,6 @@ export class ProfileService {
     this.username = 'SusanMageto';
   }
 
-<<<<<<< HEAD
-  private username!:string;
-  clientid = '';
-  clientsecret = '';
-=======
   getProfileInfo() {
     return this.http.get(
       'https://api.github.com/users/' +
@@ -28,7 +23,6 @@ export class ProfileService {
     )
     .pipe(map((res:any)=>res));
   }
->>>>>>> master
 
   getProfileRepos() {
     return this.http.get(
